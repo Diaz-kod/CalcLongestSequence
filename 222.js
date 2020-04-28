@@ -44,7 +44,7 @@ function factorial(n) {
     let previousNumber = n;
     let i = 0;
 
-    while(currentNumber >= 1 && previousNumber > 0) {
+    while(currentNumber >= 1) {
             previousNumber = previousNumber-- * currentNumber--;
             result = previousNumber;
             i++
@@ -52,5 +52,5 @@ function factorial(n) {
     return result
 }
 
-console.log(factorial(20));
+console.log(factorial(1));
 
