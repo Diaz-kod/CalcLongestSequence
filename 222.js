@@ -1,7 +1,7 @@
 
 function calcLongestSequence(n) {
 	let currentlength = 0;
-	let maxLength = 0;
+	let maxLength = 1;
 	let currentNumber = 0;
 	let previousNumber = 0;
 	let i = 0;
