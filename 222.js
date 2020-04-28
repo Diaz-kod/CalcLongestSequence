@@ -28,7 +28,7 @@ function numberDivisors(n) {
     let i = 0;
 
     while(currentNumber >= 1) {
-        if( n / currentNumber === Math.round(n / currentNumber)) {
+        if( n % currentNumber === 0) {
             result++
         }
         currentNumber--
@@ -37,7 +37,22 @@ function numberDivisors(n) {
     return result
 }
 
-console.log(numberDivisors(40));
 
+function factorial(n) {
+    let result = 0;
+    let currentNumber = n - 1;
+    let previousNumber = n;
+    let i = 0;
 
+    while(currentNumber >= 1) {
+        if(previousNumber > 0) {
+            previousNumber = previousNumber-- * currentNumber--;
+            result = previousNumber;
+        }
+        i++
+    }
+    return result
+}
+
+console.log(factorial(20));
 
