@@ -39,17 +39,15 @@ function numberDivisors(n) {
 
 
 function factorial(n) {
-    let result = 0;
+    let result = 1;
     let currentNumber = n - 1;
     let previousNumber = n;
     let i = 0;
 
-    while(currentNumber >= 1) {
-        if(previousNumber > 0) {
+    while(currentNumber >= 1 && previousNumber > 0) {
             previousNumber = previousNumber-- * currentNumber--;
             result = previousNumber;
-        }
-        i++
+            i++
     }
     return result
 }
