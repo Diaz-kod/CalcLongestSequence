@@ -64,7 +64,7 @@ function sumDividers(n) {
         currentNumber--
         i++
     }
-    return result === n ? true : false
+    return result === n 
 }
 
 console.log(sumDividers(6));
