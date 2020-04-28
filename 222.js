@@ -52,5 +52,19 @@ function factorial(n) {
     return result
 }
 
-console.log(factorial(1));
+function sumDividers(n) {
+    let result = 0;
+    let currentNumber = n - 1;
+    let i = 0;
 
+    while(currentNumber >= 1) {
+        if(n % currentNumber === 0) {
+            result = result + currentNumber
+        }
+        currentNumber--
+        i++
+    }
+    return result === n ? true : false
+}
+
+console.log(sumDividers(6));
