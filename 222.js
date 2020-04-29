@@ -50,7 +50,10 @@ function factorial(n) {
             i++
     }
     return result
+    factorial();
 }
+
+
 
 function sumDividers(n) {
     let result = 0;
@@ -67,4 +70,15 @@ function sumDividers(n) {
     return result === n 
 }
 
-console.log(sumDividers(6));
+
+function getFactorial(n) {
+    if(n === 1) {
+        return 1
+    }
+    else {
+        return n * getFactorial(n - 1)
+    }
+
+}
+console.log(getFactorial(6));
+
