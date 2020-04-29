@@ -38,6 +38,7 @@ function numberDivisors(n) {
 }
 
 
+
 function factorial(n) {
     let result = 1;
     let currentNumber = n - 1;
@@ -71,6 +72,20 @@ function sumDividers(n) {
 }
 
 
+
+
+function getsumDivisors(n) {
+    let result = 0;
+    if(n >= 1) {
+        result = n * getsumDivisors(n - 1)
+    }
+    return result === n
+}
+
+console.log(getsumDivisors(28));
+
+
+
 function getFactorial(n) {
     if(n === 1) {
         return 1
@@ -80,5 +95,5 @@ function getFactorial(n) {
     }
 
 }
-console.log(getFactorial(6));
+
 
