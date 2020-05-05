@@ -119,9 +119,26 @@ function getXuy(n) {
     }
 }
 
-console.log(getXuy(3455));
+function letterCheck(n) {
+    let letters = 'ауоыиэяюёе';
+    for(let i = 0; i < letters.length;i++) {
+        if(n === letters[i]) {
+            return true
+        }
+    }
+    return false
+}
+
+function vowels(n) {
+    let result = 0;
+    for(let i = 0; i < n.length; i++) {
+        if(letterCheck(n[i]) == true) {
+            result++
+        }
+    }
+    return result
+}
 
 
-
-
+console.log(vowels('нефертикультябистый'));
 
