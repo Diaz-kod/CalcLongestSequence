@@ -39,6 +39,26 @@ function numberDivisors(n) {
 
 
 
+function getnumberDivisors(n, currentNumber) {
+    let result = 0;
+    if(currentNumber === undefined) {
+        currentNumber = n
+    }
+    if(currentNumber === 0) {
+        return result
+    }
+    if(n % currentNumber === 0) {
+        result = getnumberDivisors(n, currentNumber - 1) + 1
+    }
+    else {
+        result = getnumberDivisors(n, currentNumber - 1)
+    }
+    return result
+}
+
+
+
+
 function factorial(n) {
     let result = 1;
     let currentNumber = n - 1;
@@ -72,20 +92,6 @@ function sumDividers(n) {
 }
 
 
-
-
-function getsumDivisors(n) {
-    let result = 0;
-    if(n >= 1) {
-        result = n * getsumDivisors(n - 1)
-    }
-    return result === n
-}
-
-console.log(getsumDivisors(28));
-
-
-
 function getFactorial(n) {
     if(n === 1) {
         return 1
@@ -93,7 +99,29 @@ function getFactorial(n) {
     else {
         return n * getFactorial(n - 1)
     }
-
 }
+
+
+function getXuy(n) {
+    let result = [];
+    let i = 0;
+    while(n >= 1) {
+        if(n / 10) {
+            result.push(0 + n / 10);
+        }
+        if(n / 20) {
+            result.push(0 + n / 20);
+        }
+        if(n / 30) {
+            result.push(0 + n / 30);
+        }
+        return result
+    }
+}
+
+console.log(getXuy(3455));
+
+
+
 
 
