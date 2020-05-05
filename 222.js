@@ -101,7 +101,6 @@ function getFactorial(n) {
     }
 }
 
-
 function getXuy(n) {
     let result = [];
     let i = 0;
@@ -119,16 +118,6 @@ function getXuy(n) {
     }
 }
 
-function letterCheck(n) {
-    let letters = 'ауоыиэяюёе';
-    for(let i = 0; i < letters.length;i++) {
-        if(n === letters[i]) {
-            return true
-        }
-    }
-    return false
-}
-
 function vowels(n) {
     let result = 0;
     for(let i = 0; i < n.length; i++) {
@@ -140,5 +129,33 @@ function vowels(n) {
 }
 
 
-console.log(vowels('нефертикультябистый'));
 
+
+function letterCheck(n) {
+    let letters = 'ауоыиэяюёе';
+    for(let i = 0; i < letters.length;i++) {
+        if(n === letters[i]) {
+            return true
+        }
+    }
+    return false
+}
+
+
+
+function addingVowelsAndConsonants(n) {
+    let result = '';
+    let leftpart = '';
+    let rightpart = '';
+    for(let i = 0; i < n.length; i++) {
+        if(letterCheck(n[i])) {
+            leftpart = leftpart + n[i]
+        }
+        else {
+            rightpart = rightpart + n[i]
+        }
+    }
+    return result = leftpart + rightpart
+}
+
+console.log(addingVowelsAndConsonants('рухалдиньо'));
