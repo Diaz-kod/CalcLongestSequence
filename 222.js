@@ -132,7 +132,7 @@ function letterCheck(n) {
 function vowels(n) {
     let result = 0;
     for(let i = 0; i < n.length; i++) {
-        if(letterCheck(n[i]) == true) {
+        if(letterCheck(n[i])) {
             result++
         }
     }
