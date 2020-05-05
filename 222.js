@@ -140,7 +140,7 @@ function letterCheck(n) {
     }
     return false
 }
-
+// console.log(letterCheck('k'));
 
 
 function addingVowelsAndConsonants(n) {
@@ -158,4 +158,17 @@ function addingVowelsAndConsonants(n) {
     return result = leftpart + rightpart
 }
 
-console.log(addingVowelsAndConsonants('рухалдиньо'));
+function getUpperCase(n) {
+    let result = '';
+    for(let i = 0; i < n.length; i++) {
+        if(n[i - 1] == '.') {
+             result = result + n[i].toUpperCase()
+        }
+        else {
+        result = result + n[i]
+        }
+    }
+    return result
+}
+
+console.log(getUpperCase('dsdds.ffg.gfgfg'));
