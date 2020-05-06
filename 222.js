@@ -171,4 +171,38 @@ function getUpperCase(n) {
     return result
 }
 
-console.log(getUpperCase('dsdds.ffg.gfgfg'));
+function stringSubstitute(x, n) {
+    let itAFirstPart = true;
+    let result1 = ''
+    let result2 = ''
+    for(let i = 0; i < x.length; i++) {
+        if(x[i] == '$') {
+            itAFirstPart = false
+            continue
+        }
+        if(itAFirstPart) {
+            result1 = result1 + x[i]
+        }
+        else {
+            result2 = result2 + x[i]
+        }
+    }
+    return result1 + n + result2
+}
+
+console.log(stringSubstitute('asdasd $ dasdasd', 'insert string'))
+
+
+
+function fourElement(n) {
+    let result = ''
+    let i = 0;
+    while(i < n.length && n[i] !== 'y')  {
+        result = result + n[i]
+        i++
+    }
+    return result
+}
+
+
+
