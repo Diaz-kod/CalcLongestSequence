@@ -190,10 +190,6 @@ function stringSubstitute(x, n) {
     return result1 + n + result2
 }
 
-console.log(stringSubstitute('asdasd $ dasdasd', 'insert string'))
-
-
-
 function fourElement(n) {
     let result = ''
     let i = 0;
@@ -203,6 +199,24 @@ function fourElement(n) {
     }
     return result
 }
+
+
+function cuttingOut(n, a, b) {
+    let result = ''
+    for(let i = a ; i < n.length; i++) {
+        if(b > result.length) {
+            result = result + n[i]
+        }
+        else {
+            return result
+        }
+    }
+    return result
+}
+console.log(cuttingOut("fuckdera", 3, 20))
+
+
+
 
 
 
