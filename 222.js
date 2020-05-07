@@ -213,10 +213,22 @@ function cuttingOut(n, a, b) {
     }
     return result
 }
-console.log(cuttingOut("fuckdera", 3, 20))
 
 
+function toUpLetter(n) {
+    let result = ''
+    for(let i = 0; i < n.length; i++) {
+        if(i % 2 == 0) {
+            result = result + n[i].toUpperCase()
+        }
+        else {
+           result = result + n[i]
+        }
+    }
+    return result
+}
 
+console.log(toUpLetter('asdfghj'))
 
 
 
