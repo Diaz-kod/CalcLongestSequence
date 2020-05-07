@@ -228,7 +228,26 @@ function toUpLetter(n) {
     return result
 }
 
-console.log(toUpLetter('asdfghj'))
+
+function backwards(n) {
+    let result = ''
+    for(let i = n.length; i >= 0; i--) {
+        if(n[i]) {
+         result = result + n[i]
+        }
+    }
+    return result
+}
 
 
 
+function polindrop(n) { 
+    for(let i = 0; i < n.length; i++) {
+        if(n === backwards(n)) {
+            return true
+        }
+       return false
+    }
+}
+
+console.log(polindrop('доход'))
