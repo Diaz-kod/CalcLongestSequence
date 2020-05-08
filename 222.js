@@ -239,6 +239,28 @@ function backwards(n) {
     return result
 }
 
+function spaceRemoval(n) {
+    let result = ''
+    for(let i = 0; i < n.length; i++) {
+        if(n[i] === ' ') {
+            result
+        }
+        if(n[i] !== ' ') {
+        result = result + n[i]
+        }
+    }
+    return result
+}
+
+function lowerCase(n) {
+    let result = ''
+    for(let i = 0; i < n.length; i++) {
+        if(n[i]) {
+            result = result + n[i].toLowerCase()
+        }
+    }
+    return result
+}
 
 
 function polindrop(n) { 
@@ -250,4 +272,4 @@ function polindrop(n) {
     }
 }
 
-console.log(polindrop('доход'))
+console.log(polindrop(spaceRemoval((lowerCase('Доход                                    ')))))
